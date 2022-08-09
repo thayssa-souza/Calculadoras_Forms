@@ -48,5 +48,6 @@ namespace Calculadora_forms
             textBox_height.Text = String.Empty;
             label_result.Text = String.Empty;
         }
+
     }
 }
