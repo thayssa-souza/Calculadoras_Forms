@@ -49,6 +49,7 @@
             // 
             // textBox_number
             // 
+            this.textBox_number.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox_number.Location = new System.Drawing.Point(23, 24);
             this.textBox_number.Multiline = true;
             this.textBox_number.Name = "textBox_number";
