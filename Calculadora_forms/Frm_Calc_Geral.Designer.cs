@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_number = new System.Windows.Forms.TextBox();
             this.btn_sete = new System.Windows.Forms.Button();
             this.btn_8 = new System.Windows.Forms.Button();
             this.btn_nove = new System.Windows.Forms.Button();
@@ -47,13 +47,14 @@
             this.btn_div = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBox_number
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 24);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(261, 28);
-            this.textBox1.TabIndex = 0;
+            this.textBox_number.Location = new System.Drawing.Point(23, 24);
+            this.textBox_number.Multiline = true;
+            this.textBox_number.Name = "textBox_number";
+            this.textBox_number.Size = new System.Drawing.Size(261, 28);
+            this.textBox_number.TabIndex = 0;
+            this.textBox_number.TextChanged += new System.EventHandler(this.textBox_number_TextChanged);
             // 
             // btn_sete
             // 
@@ -64,6 +65,7 @@
             this.btn_sete.TabIndex = 1;
             this.btn_sete.Text = "7";
             this.btn_sete.UseVisualStyleBackColor = true;
+            this.btn_sete.Click += new System.EventHandler(this.btn_sete_Click);
             // 
             // btn_8
             // 
@@ -73,6 +75,7 @@
             this.btn_8.TabIndex = 2;
             this.btn_8.Text = "8";
             this.btn_8.UseVisualStyleBackColor = true;
+            this.btn_8.Click += new System.EventHandler(this.btn_8_Click);
             // 
             // btn_nove
             // 
@@ -82,6 +85,7 @@
             this.btn_nove.TabIndex = 3;
             this.btn_nove.Text = "9";
             this.btn_nove.UseVisualStyleBackColor = true;
+            this.btn_nove.Click += new System.EventHandler(this.btn_nove_Click);
             // 
             // btn_seis
             // 
@@ -91,6 +95,7 @@
             this.btn_seis.TabIndex = 6;
             this.btn_seis.Text = "6";
             this.btn_seis.UseVisualStyleBackColor = true;
+            this.btn_seis.Click += new System.EventHandler(this.btn_seis_Click);
             // 
             // btn_cinco
             // 
@@ -100,6 +105,7 @@
             this.btn_cinco.TabIndex = 5;
             this.btn_cinco.Text = "5";
             this.btn_cinco.UseVisualStyleBackColor = true;
+            this.btn_cinco.Click += new System.EventHandler(this.btn_cinco_Click);
             // 
             // btn_quatro
             // 
@@ -109,6 +115,7 @@
             this.btn_quatro.TabIndex = 4;
             this.btn_quatro.Text = "4";
             this.btn_quatro.UseVisualStyleBackColor = true;
+            this.btn_quatro.Click += new System.EventHandler(this.btn_quatro_Click);
             // 
             // btn_tres
             // 
@@ -118,6 +125,7 @@
             this.btn_tres.TabIndex = 9;
             this.btn_tres.Text = "3";
             this.btn_tres.UseVisualStyleBackColor = true;
+            this.btn_tres.Click += new System.EventHandler(this.btn_tres_Click);
             // 
             // btn_dois
             // 
@@ -127,6 +135,7 @@
             this.btn_dois.TabIndex = 8;
             this.btn_dois.Text = "2";
             this.btn_dois.UseVisualStyleBackColor = true;
+            this.btn_dois.Click += new System.EventHandler(this.btn_dois_Click);
             // 
             // btn_um
             // 
@@ -136,6 +145,7 @@
             this.btn_um.TabIndex = 7;
             this.btn_um.Text = "1";
             this.btn_um.UseVisualStyleBackColor = true;
+            this.btn_um.Click += new System.EventHandler(this.btn_um_Click);
             // 
             // btn_result
             // 
@@ -145,6 +155,7 @@
             this.btn_result.TabIndex = 12;
             this.btn_result.Text = "=";
             this.btn_result.UseVisualStyleBackColor = true;
+            this.btn_result.Click += new System.EventHandler(this.btn_result_Click);
             // 
             // btn_zero
             // 
@@ -154,6 +165,7 @@
             this.btn_zero.TabIndex = 11;
             this.btn_zero.Text = "0";
             this.btn_zero.UseVisualStyleBackColor = true;
+            this.btn_zero.Click += new System.EventHandler(this.btn_zero_Click);
             // 
             // btn_limpar
             // 
@@ -163,6 +175,7 @@
             this.btn_limpar.TabIndex = 10;
             this.btn_limpar.Text = "Limpar";
             this.btn_limpar.UseVisualStyleBackColor = true;
+            this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
             // btn_soma
             // 
@@ -172,6 +185,7 @@
             this.btn_soma.TabIndex = 13;
             this.btn_soma.Text = "+";
             this.btn_soma.UseVisualStyleBackColor = true;
+            this.btn_soma.Click += new System.EventHandler(this.btn_soma_Click);
             // 
             // btn_sub
             // 
@@ -181,6 +195,7 @@
             this.btn_sub.TabIndex = 14;
             this.btn_sub.Text = "-";
             this.btn_sub.UseVisualStyleBackColor = true;
+            this.btn_sub.Click += new System.EventHandler(this.btn_sub_Click);
             // 
             // btn_multi
             // 
@@ -190,6 +205,7 @@
             this.btn_multi.TabIndex = 15;
             this.btn_multi.Text = "*";
             this.btn_multi.UseVisualStyleBackColor = true;
+            this.btn_multi.Click += new System.EventHandler(this.btn_multi_Click);
             // 
             // btn_div
             // 
@@ -199,6 +215,7 @@
             this.btn_div.TabIndex = 16;
             this.btn_div.Text = "/";
             this.btn_div.UseVisualStyleBackColor = true;
+            this.btn_div.Click += new System.EventHandler(this.btn_div_Click);
             // 
             // Frm_Calc_Geral
             // 
@@ -222,9 +239,10 @@
             this.Controls.Add(this.btn_nove);
             this.Controls.Add(this.btn_8);
             this.Controls.Add(this.btn_sete);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_number);
             this.Name = "Frm_Calc_Geral";
             this.Text = "Calculadora";
+            this.Load += new System.EventHandler(this.Frm_Calc_Geral_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,7 +250,7 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox textBox_number;
         private Button btn_sete;
         private Button btn_8;
         private Button btn_nove;
