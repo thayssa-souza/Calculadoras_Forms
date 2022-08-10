@@ -54,6 +54,7 @@
             this.textBox_number.Name = "textBox_number";
             this.textBox_number.Size = new System.Drawing.Size(261, 28);
             this.textBox_number.TabIndex = 0;
+            this.textBox_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_number.TextChanged += new System.EventHandler(this.textBox_number_TextChanged);
             // 
             // btn_sete
